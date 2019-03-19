@@ -1,21 +1,21 @@
-# KSYS ObjectData Tool
+# KBS ObjectData Tool from KSYS
 The ObjectDataTool(ODT) plugin adds the functionality of import/export AD data.
 
 The core design concept of ODT it is based on following assumption:
-
-    The uuid value of standard AD data which released from iDempiere are unique and keeping unchanged during its life cycle.
-    The each customized application we are creating by AD structure must be assigned to one specified EntityType.
+* The uuid value of standard AD data which released from iDempiere are unique and keeping unchanged during its life cycle.
+* The each customized application we are creating by AD structure must be assigned to one specified EntityType.
 
 The main features will be provided by ODT:
-
-    Import ODT package
-    Export ODT package
-    Install application
-    Uninstall application
-    Refresh ODT package
-    Link EntityType
+* Import ODT package
+* Export ODT package
+* Install application
+* Uninstall application
+* Refresh ODT package
+* Link EntityType
 	
 Developed by ken.longnan@gmail.com, contributed by KSYS
+
+Please refer to http://wiki.idempiere.org/en/Plugin:_ObjectDataTool
 
 ## Installation
 
