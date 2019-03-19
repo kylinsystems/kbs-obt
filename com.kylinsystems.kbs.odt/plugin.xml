@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="com.kylinsystems.kbs.odt.process.VersionRefreshProcess"
+         name="ODT VersionRefresh Process"
+         point="org.adempiere.base.Process">
+      <process
+            class="com.kylinsystems.kbs.odt.process.VersionRefreshProcess">
+      </process>
+   </extension>
+   <extension
+         id="com.kylinsystems.kbs.odt.process.LinkEntityTypeProcess"
+         name="ODT Version Link EntityType Process"
+         point="org.adempiere.base.Process">
+      <process
+            class="com.kylinsystems.kbs.odt.process.LinkEntityTypeProcess">
+      </process>
+   </extension>   
+   <extension
+         id="com.kylinsystems.kbs.odt.process.VersionReleaseProcess"
+         name="ODT VersionRelease Process"
+         point="org.adempiere.base.Process">
+      <process
+            class="com.kylinsystems.kbs.odt.process.VersionReleaseProcess">
+      </process>
+   </extension>
+   <extension
+         id="com.kylinsystems.kbs.odt.process.PackageInstallProcess"
+         name="ODT PackageInstall Process"
+         point="org.adempiere.base.Process">
+      <process
+            class="com.kylinsystems.kbs.odt.process.PackageInstallProcess">
+      </process>
+   </extension>
+   <extension
+         id="com.kylinsystems.kbs.odt.process.PackageUninstallProcess"
+         name="ODT PackageUninstall Process"
+         point="org.adempiere.base.Process">
+      <process
+            class="com.kylinsystems.kbs.odt.process.PackageUninstallProcess">
+      </process>
+   </extension>
+   <extension
+         id="com.kylinsystems.kbs.odt.process.ExportPackageProcess"
+         name="ODT ExportPackage Process"
+         point="org.adempiere.base.Process">
+      <process
+            class="com.kylinsystems.kbs.odt.process.ExportPackageProcess">
+      </process>
+   </extension>
+   <extension
+         id="com.kylinsystems.kbs.odt.process.CopyPackageProcess"
+         name="ODT CopyPackage Process"
+         point="org.adempiere.base.Process">
+      <process
+            class="com.kylinsystems.kbs.odt.process.CopyPackageProcess">
+      </process>
+   </extension>
+   <extension
+         id="com.kylinsystems.kbs.odt.process.ImportPackageProcess"
+         name="ODT ImportPackage Process"
+         point="org.adempiere.base.Process">
+      <process
+            class="com.kylinsystems.kbs.odt.process.ImportPackageProcess">
+      </process>
+   </extension>
+</plugin>

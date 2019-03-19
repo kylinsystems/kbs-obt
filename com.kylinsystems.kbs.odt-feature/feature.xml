@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.kylinsystems.kbs.odt.feature"
+      label="KBS-ODT-feature"
+      version="6.2.0.qualifier">
+
+   <plugin
+         id="com.kylinsystems.kbs.odt"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

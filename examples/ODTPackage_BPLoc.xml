@@ -1,0 +1,1386 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<KSYS_IDEMPIERE>
+  <ODTPackage ID="1000004" IsImportedODT="Y" ObjectType="ODT_APP" UUID="472bae62-a2bc-4807-8f09-3db73d0ef23b">
+    <Name><![CDATA[Test BP Location]]></Name>
+    <Description><![CDATA[Add changes to BP Location]]></Description>
+    <ODTVersion ID="1000003" UUID="bf2ccf8b-352e-4040-a660-cdd9de881586" VersionNo="1" Version_Status="Draft">
+      <Name><![CDATA[Test BP Location-V1]]></Name>
+      <Description/>
+      <SystemVersion/>
+      <ODTObjectData AD_Table_ID="882" ID="1000456" ObjectData_Action="N/A" ObjectData_Status="Unapplied" ObjectData_Type="AD Object" ObjectData_UUID="863a8518-ad31-403f-a719-b8db72bf1584" Record_ID="1000002" SeqNo="10" UUID="a88da9f1-af2f-45e6-9ad2-efeef0b63916">
+        <Name><![CDATA[AD_EntityType-1000002]]></Name>
+        <SQL_Apply/>
+        <SQL_Unapply/>
+        <MessgeLog/>
+        <ODTObjectDataLine AD_Column_ID="15607" ID="1018184" UUID="87963c2e-4b41-4fe5-9f7e-2a9123066234">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15605" ID="1018185" UUID="be074b13-5935-4f37-a881-eea9e505bd82">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15604" ID="1018186" UUID="1e3aedba-e984-4863-b15d-bc3579e4fe4a">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15603" ID="1018187" UUID="a30c04b8-2c37-4d20-a7a8-b8d786edd408">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15592" ID="1018188" UUID="442c2a50-adc2-4be1-aaae-46206798f92b">
+          <NewValue>Test_BP_Loc</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15606" ID="1018189" UUID="4f7bd1b3-52d7-461e-94d4-81012b0fba10">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15602" ID="1018190" UUID="487dcb27-0f11-4a2d-a752-e670128852d9">
+          <NewValue>Test BP Location</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="60397" ID="1018191" UUID="63537d5c-e2c9-4c01-84ca-4330cb81834c">
+          <NewValue>863a8518-ad31-403f-a719-b8db72bf1584</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15596" ID="1018192" UUID="584519e0-497d-4794-a06a-feebda585d9c">
+          <NewValue>Y</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15599" ID="1018193" UUID="dad3990b-f062-4994-a587-bb4e7d9cb25d">
+          <NewValue>2013-12-17 19:46:58</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15600" ID="1018194" UUID="61cb895b-5c09-4453-a30e-2f6d4c53d64e">
+          <NewValue>SuperUser</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>100</NewID>
+          <OldID>0</OldID>
+          <NewUUID>986cb4dc-7161-4d77-a7c7-3832d24b19de</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15597" ID="1018195" UUID="12569e67-57aa-44c3-8f88-b8ccd9287abc">
+          <NewValue>2013-12-17 19:46:58</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15598" ID="1018196" UUID="a1a99ce0-2d0f-4e20-837e-ced0a87e8261">
+          <NewValue>SuperUser</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>100</NewID>
+          <OldID>0</OldID>
+          <NewUUID>986cb4dc-7161-4d77-a7c7-3832d24b19de</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15595" ID="1018197" UUID="97cd5d37-b469-4bdc-b625-61b8d2399c36">
+          <NewValue>1000002</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15594" ID="1018198" UUID="0242bb84-878c-4e3e-887f-65a0b2981297">
+          <NewValue>*</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID>3ef41ffc-8ea9-454a-afa2-22949f402ff5</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15601" ID="1018199" UUID="d1a4a6ad-2fdf-4a1b-8ed0-a743f1b16a8c">
+          <NewValue>Test BP Location</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15593" ID="1018200" UUID="2dfb5b9e-ffd0-4765-89e3-0921a561a70c">
+          <NewValue>System</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID>11237b53-9592-4af1-b3c5-afd216514b5d</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+      </ODTObjectData>
+      <ODTObjectData AD_Table_ID="276" ID="1000457" ObjectData_Action="N/A" ObjectData_Status="Unapplied" ObjectData_Type="AD Object" ObjectData_UUID="bee887c4-fe3a-44e9-8e35-508803213346" Record_ID="1000034" SeqNo="20" UUID="499b05da-5035-46d7-ad24-2fddf0951ca2">
+        <Name><![CDATA[AD_Element-1000034]]></Name>
+        <SQL_Apply/>
+        <SQL_Unapply/>
+        <MessgeLog/>
+        <ODTObjectDataLine AD_Column_ID="2602" ID="1018201" UUID="83befff6-37ab-4d14-9cc3-96a1470e7d13">
+          <NewValue>MyAddress</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2594" ID="1018202" UUID="a29ac480-8bb0-41ec-b700-f7ef1811d21a">
+          <NewValue>1000034</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2605" ID="1018203" UUID="954cc7ff-88bb-456c-b896-26e802f8bcc1">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="6284" ID="1018204" UUID="ff800375-5208-4fff-8240-3d9dfb24b21a">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="6283" ID="1018205" UUID="fb0a92f2-1df8-48c2-bd75-945ea3311f0a">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="6286" ID="1018206" UUID="2ec1c4df-c27f-4c4d-bbc2-abfdd34f2bff">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2603" ID="1018207" UUID="6208f303-a1b5-4d7c-a55a-5dcc0239766b">
+          <NewValue>My Address</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2604" ID="1018208" UUID="e6295467-a5f2-48f2-a489-0daadcfecd64">
+          <NewValue>My Address</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="4299" ID="1018209" UUID="93f8d2b1-6ba1-4962-8cb9-be2c408e14b3">
+          <NewValue>My Address</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="6285" ID="1018210" UUID="653e6a07-2821-465c-9f2d-fc6a4b17439c">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="60395" ID="1018211" UUID="4334cef8-9a11-4a98-9baf-b4f35e769d33">
+          <NewValue>bee887c4-fe3a-44e9-8e35-508803213346</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2598" ID="1018212" UUID="666f8de8-733a-4728-ada3-f53fb807a495">
+          <NewValue>2013-12-17 19:47:27</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2600" ID="1018213" UUID="c0abe96c-481d-4bf1-bd63-64a904df1e0b">
+          <NewValue>2013-12-17 19:47:27</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2596" ID="1018214" UUID="38e399b3-dabc-4219-be14-a59172db6b6f">
+          <NewValue>*</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID>3ef41ffc-8ea9-454a-afa2-22949f402ff5</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2599" ID="1018215" UUID="ba4d92a8-6566-44f8-b443-0a29f10200ff">
+          <NewValue>SuperUser</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>100</NewID>
+          <OldID>0</OldID>
+          <NewUUID>986cb4dc-7161-4d77-a7c7-3832d24b19de</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2601" ID="1018216" UUID="3b13ce64-7379-4658-b793-231a62ada358">
+          <NewValue>SuperUser</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>100</NewID>
+          <OldID>0</OldID>
+          <NewUUID>986cb4dc-7161-4d77-a7c7-3832d24b19de</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2597" ID="1018217" UUID="1727981f-e572-452c-a5f6-afa443bd7c05">
+          <NewValue>Y</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2595" ID="1018218" UUID="c6898ce9-3013-4675-acb1-e9429dc1d17f">
+          <NewValue>System</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID>11237b53-9592-4af1-b3c5-afd216514b5d</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="6484" ID="1018219" UUID="83a0ad71-5a89-4068-8efa-42f6789c10de">
+          <NewValue>Test_BP_Loc</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+      </ODTObjectData>
+      <ODTObjectData AD_Table_ID="101" ID="1000458" ObjectData_Action="N/A" ObjectData_Status="Unapplied" ObjectData_Type="AD Object" ObjectData_UUID="f04d7746-a965-4680-9884-68ff198ef217" Record_ID="1000089" SeqNo="30" UUID="4bd61197-ba31-470a-be72-41b61124c7de">
+        <Name><![CDATA[AD_Column-1000089]]></Name>
+        <SQL_Apply/>
+        <SQL_Unapply/>
+        <MessgeLog/>
+        <ODTObjectDataLine AD_Column_ID="200323" ID="1018220" UUID="08f53041-15fc-4c84-83b3-3293e5cfe82a">
+          <NewValue>0</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="6483" ID="1018221" UUID="85a2e6a6-81f0-45c8-901f-a9e6f2c07cfc">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="110" ID="1018222" UUID="12dc58c1-1983-4688-9ef3-f5444695c8bf">
+          <NewValue>0</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="109" ID="1018223" UUID="f5f4720b-dc83-4c30-8bad-a8d3aac040bc">
+          <NewValue>1000089</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="3389" ID="1018224" UUID="b5744d12-16f4-458e-ae66-a143417699be">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="124" ID="1018225" UUID="f30fc3e3-d380-429e-9364-6caa8a34c7fd">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="125" ID="1018226" UUID="1c1a85aa-b7ec-4005-ad68-6b244cb6544b">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="126" ID="1018227" UUID="5d270c7d-b6ea-4712-a1c1-293dca9dd679">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="127" ID="1018228" UUID="b794789b-ed9c-4e5d-a22f-f6a8e7b678d2">
+          <NewValue>0</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="3388" ID="1018229" UUID="dc3f7245-6435-45f0-8638-60fbdc68a534">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="120" ID="1018230" UUID="b1a61b8c-6198-47a5-a11a-99719ea5c0c4">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="118" ID="1018231" UUID="374a7459-4269-4ca2-86dc-88138993efbe">
+          <NewValue>60</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="6244" ID="1018232" UUID="403a892f-7c25-46f6-ae11-1c5e70d8680f">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="119" ID="1018233" UUID="f3c39307-64d3-4a6c-94f9-0869940e10e8">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="3369" ID="1018234" UUID="2d9f4b92-4779-4d82-b088-373fc8312bbe">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="6245" ID="1018235" UUID="391305be-98cd-4310-afbe-8d21b4849da4">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="56149" ID="1018236" UUID="72129bc4-534a-4e2e-9fc4-3a4ae8391a20">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="56187" ID="1018237" UUID="03df15a6-af67-44aa-a009-c2c39533e79c">
+          <NewValue>Y</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="50218" ID="1018238" UUID="dbfe495a-d9f7-467a-a4f4-0ad903bfd8a2">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="56352" ID="1018239" UUID="d7a14915-150f-4467-8c05-2befe6e81aba">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="60388" ID="1018240" UUID="f43b6853-4472-4f3e-9d29-a78ebaadb598">
+          <NewValue>f04d7746-a965-4680-9884-68ff198ef217</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="3360" ID="1018241" UUID="b5650be2-4582-495f-98f7-d2f0e94dee70">
+          <NewValue>Y</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="1692" ID="1018242" UUID="f3ab2a27-58ea-41c9-87f6-d8ae694a32f2">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="116" ID="1018243" UUID="814c545e-fb14-4997-b5bb-34c4ab4ddb03">
+          <NewValue>MyAddress</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="112" ID="1018244" UUID="3a524099-6e01-4168-96d7-9e0a4aaaa8bd">
+          <NewValue>My Address</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="13448" ID="1018245" UUID="92b8002c-60fc-4da2-a704-20708518ea9f">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="117" ID="1018246" UUID="9fd350fe-0640-40bc-8830-5a699d7a466a">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="113" ID="1018247" UUID="d0ee979d-8c1f-4535-a64e-1309e04d637f">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="111" ID="1018248" UUID="7af177e1-aa7e-4023-b407-989d8b1bbf86">
+          <NewValue>My Address</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="62199" ID="1018249" UUID="7fa7dd4d-9309-47f9-bd1a-811aa6a513f9">
+          <NewValue>Y</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="551" ID="1018250" UUID="9c2f5c48-e4fb-49a7-b152-d8ef00ce7b3c">
+          <NewValue>2013-12-17 19:52:25</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="550" ID="1018251" UUID="2233f770-5a50-44d4-8cb6-a85f92d499f3">
+          <NewValue>SuperUser</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>100</NewID>
+          <OldID>0</OldID>
+          <NewUUID>986cb4dc-7161-4d77-a7c7-3832d24b19de</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="360" ID="1018252" UUID="5ebfc38d-7d7d-4f21-add6-e8aaef24fa0b">
+          <NewValue>*</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID>3ef41ffc-8ea9-454a-afa2-22949f402ff5</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="548" ID="1018253" UUID="c8842591-d7fd-4567-a5f9-e9799e7cdfbf">
+          <NewValue>Y</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="549" ID="1018254" UUID="ab692c7d-162f-494a-86b3-1e2cf431030c">
+          <NewValue>2013-12-17 19:52:25</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="552" ID="1018255" UUID="c2bb832e-1002-4439-8eb7-d91f22542623">
+          <NewValue>SuperUser</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>100</NewID>
+          <OldID>0</OldID>
+          <NewUUID>986cb4dc-7161-4d77-a7c7-3832d24b19de</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200703" ID="1018256" UUID="19babf6f-dd15-4608-94d1-9f7a0ff719e5">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="11617" ID="1018257" UUID="58ab24bf-d470-456d-b2fd-e0cae3b8a3e9">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="359" ID="1018258" UUID="5f0ab774-ab0a-41b7-ad96-501929538409">
+          <NewValue>System</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID>11237b53-9592-4af1-b3c5-afd216514b5d</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="6482" ID="1018259" UUID="9f8ae62b-c3dd-4ac2-b94e-e2193c148bd5">
+          <NewValue>Test_BP_Loc</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="1179" ID="1018260" UUID="dd74a8cf-32fb-4ffb-856e-58dbc768b64b">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="128" ID="1018261" UUID="ba24e213-c7ee-41fb-b2fc-66bf9f364118">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="210596" ID="1018262" UUID="cd3e2dba-3014-429f-8529-a4149ef03a57">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="59702" ID="1018263" UUID="054cd057-f772-4bf7-88ca-09085b549a50">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="210872" ID="1018264" UUID="e8199893-8d81-4dbd-820d-4eeffd26b546">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="210871" ID="1018265" UUID="1a72073a-f952-4852-8e22-582a68aacd5e">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2608" ID="1018266" UUID="2c810dcb-f8e1-480e-9247-110a5d04d0c5">
+          <NewValue>MyAddress</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>1000034</NewID>
+          <OldID>0</OldID>
+          <NewUUID>bee887c4-fe3a-44e9-8e35-508803213346</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="226" ID="1018267" UUID="a427c294-3ae2-4703-8c81-400932f79a51">
+          <NewValue>String#@#D</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>10</NewID>
+          <OldID>0</OldID>
+          <NewUUID>3f9a0323-219e-4b97-af37-58a2486a50e3</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="227" ID="1018268" UUID="f0fe4efe-c60e-4285-a906-4901ae939d8e">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="114" ID="1018269" UUID="3018bbe7-8e6a-4b52-b8c7-e63c7d2058f4">
+          <NewValue>C_BPartner_Location#@#Partner Location</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>293</NewID>
+          <OldID>0</OldID>
+          <NewUUID>2c23e8cd-eace-42a3-ac8e-d921d0d0c37f</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="115" ID="1018270" UUID="5ad339f9-edc1-49fa-972e-4ffb4e17bb7b">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+      </ODTObjectData>
+      <ODTObjectData AD_Table_ID="107" ID="1000459" ObjectData_Action="N/A" ObjectData_Status="Unapplied" ObjectData_Type="AD Object" ObjectData_UUID="f8d1f89c-dbd6-47d2-8050-9cf2b9ad762a" Record_ID="1000064" SeqNo="40" UUID="eebf6873-4777-4a6a-984c-f9a3ab61cee4">
+        <Name><![CDATA[AD_Field-1000064]]></Name>
+        <SQL_Apply/>
+        <SQL_Unapply/>
+        <MessgeLog/>
+        <ODTObjectDataLine AD_Column_ID="182" ID="1018271" UUID="37e26469-eb2a-4214-8512-61a21d1e6647">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="186" ID="1018272" UUID="3dd907b9-c9f8-4c29-8055-ee7d05ce2fed">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="172" ID="1018273" UUID="4ee5b4bf-b83c-4135-b4ba-c7cad9bc4ba2">
+          <NewValue>Business Partner#@#Location</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>222</NewID>
+          <OldID>0</OldID>
+          <NewUUID>c32df14a-8c72-4769-b91c-b42536ae1130</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="180" ID="1018274" UUID="1ad66f31-5957-4d28-8f46-0ee6fb12adfd">
+          <NewValue>60</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="183" ID="1018275" UUID="6f873b62-ca12-4f27-9b49-6d65338d7d8a">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="184" ID="1018276" UUID="26499667-6cb3-4af1-9549-a665d35a452d">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="181" ID="1018277" UUID="6386c121-39d4-429c-a559-a95a0534117e">
+          <NewValue>170</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2745" ID="1018278" UUID="08bd3adf-58e8-4939-ac75-8287efa8dfa5">
+          <NewValue>Y</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="167" ID="1018279" UUID="50697ee6-b885-4466-a370-1fe5dc0aa8ed">
+          <NewValue>1000064</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="2007" ID="1018280" UUID="462c6109-d201-423a-b63a-d90bfc5e3d5b">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="170" ID="1018281" UUID="2ecd8d9f-a77f-41aa-83d1-111e51d09d3f">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="9969" ID="1018282" UUID="35ca6d77-28cb-429d-af0e-3d3431e1678a">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="177" ID="1018283" UUID="93ff0d9f-9a82-4172-ae63-f178c3e1e0bb">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15013" ID="1018284" UUID="e41efe9b-5250-4952-b875-f1016f21ddd9">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="54357" ID="1018285" UUID="5281528d-6063-42aa-ba28-6142f084571b">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="57957" ID="1018286" UUID="ef0786e6-a5a9-43cd-8850-ad4fdf667572">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="169" ID="1018287" UUID="ca19ff4d-4678-4530-baa4-383f085c36ee">
+          <NewValue>My Address</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="168" ID="1018288" UUID="9df8075b-2174-4b76-b1c3-ca2ef408cc95">
+          <NewValue>My Address</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="60409" ID="1018289" UUID="f818e534-6648-4ddf-a3aa-9ea3a6f12d19">
+          <NewValue>f8d1f89c-dbd6-47d2-8050-9cf2b9ad762a</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="176" ID="1018290" UUID="64aba7c3-3bf1-408a-b82a-5b95b9062ae7">
+          <NewValue>Y</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="185" ID="1018291" UUID="7281de7f-56fc-45ca-8d04-eea14a3c0d06">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="53265" ID="1018292" UUID="1250ef9a-d6fb-4a13-8848-cea772c3bfee">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="62200" ID="1018293" UUID="66e61a3f-71d5-4021-be8e-c9888858a412">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="582" ID="1018294" UUID="d9603f2c-7394-4112-a513-adb43ab4f548">
+          <NewValue>SuperUser</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>100</NewID>
+          <OldID>0</OldID>
+          <NewUUID>986cb4dc-7161-4d77-a7c7-3832d24b19de</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="384" ID="1018295" UUID="b8480d3c-5903-4cf6-9827-17fedcde7441">
+          <NewValue>*</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID>3ef41ffc-8ea9-454a-afa2-22949f402ff5</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="579" ID="1018296" UUID="428e97c6-8bcb-4125-8c08-64024f99d380">
+          <NewValue>2013-12-17 19:53:28</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="580" ID="1018297" UUID="b9d69507-fbfc-40bc-aae2-d38881bff743">
+          <NewValue>SuperUser</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>100</NewID>
+          <OldID>0</OldID>
+          <NewUUID>986cb4dc-7161-4d77-a7c7-3832d24b19de</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="581" ID="1018298" UUID="705097fa-717e-4668-9026-4df0c140ed00">
+          <NewValue>2013-12-17 19:53:28</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="578" ID="1018299" UUID="fda06260-07d1-4895-a5df-cf7069d1e854">
+          <NewValue>Y</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200265" ID="1018300" UUID="a68971a8-ccb4-4144-8101-5b9a6f3efa9a">
+          <NewValue>Y</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200266" ID="1018301" UUID="9ef6c71d-c427-4c8a-aafa-e6044f6e9e1e">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200351" ID="1018302" UUID="f5c1cceb-8055-4549-a9f1-42910b7c31e8">
+          <NewValue>1</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200862" ID="1018303" UUID="76429c29-aaf2-4f00-ae38-bc1290da073f">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200947" ID="1018304" UUID="6bdffbec-f177-4ad9-bb51-298263f6148a">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200945" ID="1018305" UUID="ddd25baf-4a81-4ce8-bf54-b7046d9761e9">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200946" ID="1018306" UUID="ef56632f-b15a-45a8-9387-3dc979dc0ab8">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200948" ID="1018307" UUID="589c69d0-9c21-42d8-a08a-a5159460ce9a">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200949" ID="1018308" UUID="87600e33-c9f0-4615-80c0-adf7a1847cb1">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="383" ID="1018309" UUID="889a6c15-3e4b-454a-bcba-d4071e04c970">
+          <NewValue>System</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID>11237b53-9592-4af1-b3c5-afd216514b5d</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200352" ID="1018310" UUID="535df7d2-f330-4bb4-b815-7a2fb514284b">
+          <NewValue>5</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="200354" ID="1018311" UUID="56b035c0-a8a3-4b04-a745-f1aca345e09b">
+          <NewValue>1</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="210679" ID="1018312" UUID="3785b4db-16e7-4e38-bfe5-a6be412ac686">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="210664" ID="1018313" UUID="d1407a3f-e904-4b33-8982-83e30518a8f7">
+          <NewValue>N</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="174" ID="1018314" UUID="67d59eac-7895-41eb-84ad-f048bff58af6">
+          <NewValue>C_BPartner_Location#@#Partner Location#@#MyAddress#@#My Address</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>1000089</NewID>
+          <OldID>0</OldID>
+          <NewUUID>f04d7746-a965-4680-9884-68ff198ef217</NewUUID>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="5375" ID="1018315" UUID="233e6e26-5cc6-448b-b9cd-c1a085167116">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="15011" ID="1018316" UUID="7dd0b432-be37-4b0a-ad9c-f24e01e0559b">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="54356" ID="1018317" UUID="bb178e5f-7f48-47c5-9da1-7fb4cf74b760">
+          <NewValue/>
+          <OldValue/>
+          <IsNewNullValue>true</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+        <ODTObjectDataLine AD_Column_ID="7714" ID="1018318" UUID="6ec5af83-47a4-4c81-afe7-5cb8cb7dd772">
+          <NewValue>Test_BP_Loc</NewValue>
+          <OldValue/>
+          <IsNewNullValue>false</IsNewNullValue>
+          <IsOldNullValue>false</IsOldNullValue>
+          <NewID>0</NewID>
+          <OldID>0</OldID>
+          <NewUUID/>
+          <OldUUID/>
+        </ODTObjectDataLine>
+      </ODTObjectData>
+    </ODTVersion>
+  </ODTPackage>
+</KSYS_IDEMPIERE>
