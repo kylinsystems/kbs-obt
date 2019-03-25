@@ -89,7 +89,7 @@ public class MKSODTVersion extends X_KS_ODTVersion
 		List<MKSODTObjectData> odtods = getODTObjectDatas();
 		for (MKSODTObjectData odtod : odtods)
 		{
-			if (log.isLoggable(Level.INFO)) log.info("Apply ObjectData, Name:" + odtod.getName());
+			if (log.isLoggable(Level.FINE)) log.fine("Apply ObjectData, Name:" + odtod.getName());
 
 			// generate PO
 			PO po = null;
@@ -205,6 +205,7 @@ public class MKSODTVersion extends X_KS_ODTVersion
 		exportObjectData("AD_Window", whereClause_entitytype, null);
 		exportObjectData("AD_Form", whereClause_entitytype, null);
 		exportObjectData("AD_Element", whereClause_entitytype, null);
+		exportObjectData("AD_Val_Rule", whereClause_entitytype, null);
 		exportObjectData("AD_Reference", whereClause_entitytype, null);
 		exportObjectData("AD_Ref_List", whereClause_entitytype, null);
 		exportObjectData("AD_Ref_Table", whereClause_entitytype, null);
@@ -226,7 +227,7 @@ public class MKSODTVersion extends X_KS_ODTVersion
 
 	private void exportObjectData(String tableName, String whereClause, String orderClause)
 	{
-		if (log.isLoggable(Level.INFO)) log.info("Export OD, TableName:" + tableName + "|WhereClause:" + whereClause + "|OrderClause:" + orderClause);
+		if (log.isLoggable(Level.FINE)) log.fine("Export OD, TableName:" + tableName + "|WhereClause:" + whereClause + "|OrderClause:" + orderClause);
 
 		MTable table = MTable.get(getCtx(), tableName);
 		PO[] pos = Utils.getPOsByQuery(table, whereClause, orderClause, log);
@@ -249,7 +250,17 @@ public class MKSODTVersion extends X_KS_ODTVersion
 				newod.setSeqNo(10); // fixed to 10 for EntityType
 			}
 			
-			newod.setObjectData_UUID(po.get_Value(po.getUUIDColumnName()).toString());
+			String uuidColumnName = po.getUUIDColumnName();
+			if (uuidColumnName == null) {
+				if (log.isLoggable(Level.SEVERE)) log.severe("PO UUID Column Name is null" + "|TableName:" + tableName + "|PO ID:" + po.get_ID());
+			}
+			
+			Object poValue = po.get_Value(uuidColumnName);
+			if (poValue == null) {
+				if (log.isLoggable(Level.SEVERE)) log.severe("PO Value is null" + "|TableName:" + tableName + "|PO ID:" + po.get_ID() + "|UUID Column Name:" + uuidColumnName);
+			}
+			
+			newod.setObjectData_UUID(poValue.toString());
 			newod.saveEx();
 
 			// ODTObjectDataLine
@@ -274,7 +285,7 @@ public class MKSODTVersion extends X_KS_ODTVersion
 			String refTableName = null;
 			String uuid = null;
 
-			if (log.isLoggable(Level.INFO)) log.info("Export ODL, ColumnName:" + columnName + "|Value:" + value);
+			if (log.isLoggable(Level.FINE)) log.fine("Export ODL, ColumnName:" + columnName + "|Value:" + value);
 
 			if (columnDisplayType == DisplayType.TableDir)
 			{
@@ -293,7 +304,7 @@ public class MKSODTVersion extends X_KS_ODTVersion
 				}
 				//int AD_Reference_Value_ID = infoCol.AD_Reference_Value_ID;
 				int AD_Val_Rule_ID = 0;
-				if (log.isLoggable(Level.INFO)) log.info("AD_Reference_Value_ID=" + AD_Reference_Value_ID + " - AD_Val_Rule_ID=" + AD_Val_Rule_ID);
+				if (log.isLoggable(Level.FINE)) log.fine("AD_Reference_Value_ID=" + AD_Reference_Value_ID + " - AD_Val_Rule_ID=" + AD_Val_Rule_ID);
 				refTableName = Utils.findLookupTableName(AD_Reference_Value_ID, AD_Val_Rule_ID, ctx, log);
 			}
 			else if (columnDisplayType == DisplayType.Search)
@@ -302,7 +313,7 @@ public class MKSODTVersion extends X_KS_ODTVersion
 				MColumn scolumn = stable.getColumn(columnName);
 				int AD_Reference_Value_ID = scolumn.getAD_Reference_Value_ID();
 				int AD_Val_Rule_ID = scolumn.getAD_Val_Rule_ID();
-				if (log.isLoggable(Level.INFO)) log.info("AD_Reference_Value_ID=" + AD_Reference_Value_ID + " - AD_Val_Rule_ID=" + AD_Val_Rule_ID);
+				if (log.isLoggable(Level.FINE)) log.fine("AD_Reference_Value_ID=" + AD_Reference_Value_ID + " - AD_Val_Rule_ID=" + AD_Val_Rule_ID);
 				if (AD_Reference_Value_ID == 0 && AD_Val_Rule_ID == 0) //TODO: pls check
 				{
 					refTableName = columnName.substring(0, columnName.indexOf("_ID"));
@@ -361,13 +372,13 @@ public class MKSODTVersion extends X_KS_ODTVersion
 						record_id = 100;
 					}
 
-					if (log.isLoggable(Level.INFO)) log.info("Ref Table:" + refTableName + "|ID:" + record_id);
+					if (log.isLoggable(Level.FINE)) log.fine("Ref Table:" + refTableName + "|ID:" + record_id);
 
 					if (record_id == 0
 							&& !"AD_Client".equals(refTableName)
 							&& !"AD_Org".equals(refTableName))
 					{
-						if (log.isLoggable(Level.INFO)) log.info("id is 0");
+						if (log.isLoggable(Level.FINE)) log.fine("id is 0");
 					}
 
 					String idValue = Utils.findLookupIdValue(refTable, record_id, ctx, log);
@@ -392,7 +403,7 @@ public class MKSODTVersion extends X_KS_ODTVersion
 				}
 				else
 				{
-					if (log.isLoggable(Level.INFO)) log.info("Ref Table " + refTableName + ", value is null");
+					if (log.isLoggable(Level.FINE)) log.fine("Ref Table " + refTableName + ", value is null");
 				}
 			}
 

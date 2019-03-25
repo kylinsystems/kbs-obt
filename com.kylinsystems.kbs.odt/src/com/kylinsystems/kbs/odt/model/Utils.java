@@ -73,7 +73,7 @@ public class Utils {
 		boolean isColumnUpdateable = poInfo.isColumnUpdateable(columnIndex);
 		//POInfoColumn poInfoCol = poInfo.getColumn(po.get_ColumnIndex(columnName));
 
-		if (log.isLoggable(Level.INFO)) log.info("Apply ObjectDataLine, Column Name:" + columnName);
+		if (log.isLoggable(Level.FINE)) log.fine("Apply ObjectDataLine, Column Name:" + columnName);
 
 		if ("AD_Chart_ID".equalsIgnoreCase(columnName)) {
 			return po; // skip
@@ -140,7 +140,7 @@ public class Utils {
 			if (!IsNewNullValue && isColumnUpdateable && !"".equals(columnValue)) {
 				po.set_ValueNoCheck(columnName, new Integer(columnValue));
 			} else if (!isColumnUpdateable) {
-				if (log.isLoggable(Level.INFO)) log.info("Updateable is false, Column Name:" + columnName);
+				if (log.isLoggable(Level.FINE)) log.fine("Updateable is false, Column Name:" + columnName);
 			}
 		} else if (displayType == DisplayType.Number
 				|| displayType == DisplayType.Amount
@@ -149,7 +149,7 @@ public class Utils {
 			if (!IsNewNullValue && isColumnUpdateable && !"".equals(columnValue)) {
 				po.set_ValueNoCheck(columnName, new BigDecimal(columnValue));
 			} else if (!isColumnUpdateable) {
-				if (log.isLoggable(Level.INFO)) log.info("Updateable is false, Column Name:" + columnName);
+				if (log.isLoggable(Level.FINE)) log.fine("Updateable is false, Column Name:" + columnName);
 			}
 
 			if ("PriceActual".equalsIgnoreCase(columnName) && !"".equals(columnValue) &&
@@ -168,7 +168,7 @@ public class Utils {
 					if (log.isLoggable(Level.SEVERE)) log.log(Level.SEVERE, "", e);
 				}
 			} else if (!isColumnUpdateable) {
-				if (log.isLoggable(Level.INFO)) log.info("Updateable is false, Column Name:" + columnName);
+				if (log.isLoggable(Level.FINE)) log.fine("Updateable is false, Column Name:" + columnName);
 			}
 		} else if (displayType == DisplayType.PAttribute) {
 			po.set_ValueNoCheck(columnName, 0); // TODO?
@@ -199,7 +199,7 @@ public class Utils {
 					 || (columnName.equals("EntityType") && tableName.equals("AD_EntityType")))
 						po.set_ValueNoCheck(columnName, columnValue);
 					else
-						if (log.isLoggable(Level.INFO)) log.info("Updateable is false, Column Name:" + columnName);
+						if (log.isLoggable(Level.FINE)) log.fine("Updateable is false, Column Name:" + columnName);
 				}
 			}
 		}
@@ -212,7 +212,7 @@ public class Utils {
 			if (refPO != null) {
 				po.set_ValueNoCheck(columnName, refPO.get_ID());
 			} else {
-				if (log.isLoggable(Level.INFO)) log.info("RefPO is null, RefTableName:" + refTableName + "|UUID:" + NewUUID);
+				if (log.isLoggable(Level.FINE)) log.fine("RefPO is null, RefTableName:" + refTableName + "|UUID:" + NewUUID);
 			}
 		}
 
@@ -358,7 +358,7 @@ public class Utils {
 		{
 			MColumn idcol = idcols[i];
 
-			if (log.isLoggable(Level.INFO)) log.info(
+			if (log.isLoggable(Level.FINE)) log.fine(
 				"Reference Table Name=" + refTableName +
 				" - Identifier Columns(" + idcol.getSeqNo() + ")=" + idcol.getColumnName() +
 				" - SeqNo=" + idcol.getSeqNo() +
@@ -386,7 +386,7 @@ public class Utils {
 
 			if (value == null || value.equals (Null.NULL))
 			{
-				if (log.isLoggable(Level.INFO)) log.info("Value is Null! " + " - Identifier Columns =" + idcol.getColumnName());
+				if (log.isLoggable(Level.FINE)) log.fine("Value is Null! " + " - Identifier Columns =" + idcol.getColumnName());
 				resultIdValue = (resultIdValue == null? "" : resultIdValue + IdValueSeperator + "");
 			}
 			else if (c == Object.class)
@@ -411,7 +411,7 @@ public class Utils {
 		for (int i = 0; i < pcols.length; i++)
 		{
 			MColumn pcol = pcols[i];
-			if (log.isLoggable(Level.INFO)) log.info("Reference Table Name=" + refTableName +
+			if (log.isLoggable(Level.FINE)) log.fine("Reference Table Name=" + refTableName +
 				" - Parent Columns(" + pcol.getSeqNo() + ")=" + pcol.getColumnName());
 
 			String parentRefTableName = findLookupRefTableName(refTableName, pcol, ctx, log);
@@ -448,7 +448,7 @@ public class Utils {
 
 			int AD_Reference_Value_ID = col.getAD_Reference_Value_ID();
 			int AD_Val_Rule_ID = col.getAD_Val_Rule_ID();
-			if (log.isLoggable(Level.INFO)) log.info("AD_Reference_Value_ID=" + AD_Reference_Value_ID + " - AD_Val_Rule_ID=" + AD_Val_Rule_ID);
+			if (log.isLoggable(Level.FINE)) log.fine("AD_Reference_Value_ID=" + AD_Reference_Value_ID + " - AD_Val_Rule_ID=" + AD_Val_Rule_ID);
 			if (AD_Reference_Value_ID == 0 && AD_Val_Rule_ID == 0) //TODO: pls check(C_Bank_ID)
 			{
 				refTableName = col.getColumnName().substring(0, col.getColumnName().indexOf("_ID"));

@@ -185,8 +185,13 @@ public class Activator extends AdempiereActivator {
 							reloadPO.set_ValueNoCheck(reloadPO.getUUIDColumnName(), ObjectData_UUID);
 							po = reloadPO;
 						}
-
-						po.saveEx();
+						
+						try {
+							po.saveEx();
+						} catch (Exception poex) {
+							logger.log(Level.SEVERE, "Can't save PO!" + "|AD_Table:" + table.getName() + "|ObjectData_UUID:" + ObjectData_UUID);
+							throw poex;
+						}
 
 						if (po instanceof X_AD_Column)
 						{
