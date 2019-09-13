@@ -26,7 +26,7 @@ import org.compiere.util.Env;
 import org.compiere.util.Util;
 
 /**
- * KSYS model factory implementation.
+ * KSYS ODT model factory implementation.
  */
 public class ODTModelFactory extends DefaultModelFactory implements IModelFactory {
 

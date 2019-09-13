@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.kylinsystems.kbs.odt.model.factory">
    <implementation class="com.kylinsystems.kbs.odt.ODTModelFactory"/>
-   <!--property name="service.ranking" type="Integer" value="1"/-->
+   <property name="service.ranking" type="Integer" value="3"/>
    <service>
       <provide interface="org.adempiere.base.IModelFactory"/>
    </service>

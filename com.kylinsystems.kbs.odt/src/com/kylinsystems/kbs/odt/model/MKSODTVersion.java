@@ -183,10 +183,10 @@ public class MKSODTVersion extends X_KS_ODTVersion
 								"( " +
 								"select KS_ODTObjectData_ID from KS_ODTObjectData where ObjectData_Type = 'AD Object' and KS_ODTVersion_ID =  " + get_ID() +
 								")";
-		DB.executeUpdate(sqlDeleteODL, get_TrxName());
+		DB.executeUpdate(sqlDeleteODL, null);
 
 		String sqlDeleteOD = "Delete from KS_ODTObjectData where ObjectData_Type = 'AD Object' and KS_ODTVersion_ID = " + get_ID();
-		DB.executeUpdate(sqlDeleteOD, get_TrxName());
+		DB.executeUpdate(sqlDeleteOD, null);
 
 		// create new OD and ODL
 		I_KS_ODTPackage odtPackage = getKS_ODTPackage();
@@ -235,7 +235,7 @@ public class MKSODTVersion extends X_KS_ODTVersion
 		{
 			PO po = pos[i];
 			// ODTObjectData
-			X_KS_ODTObjectData newod = new X_KS_ODTObjectData(getCtx(), 0, get_TrxName());
+			X_KS_ODTObjectData newod = new X_KS_ODTObjectData(getCtx(), 0, null);
 			newod.setKS_ODTVersion_ID(get_ID());
 			newod.setName(tableName + "-" + po.get_ID());
 			newod.setObjectData_Type(X_KS_ODTObjectData.OBJECTDATA_TYPE_ADObject);
@@ -355,7 +355,7 @@ public class MKSODTVersion extends X_KS_ODTVersion
 				// no refTableName
 			}
 
-			X_KS_ODTObjectDataLine newodl = new X_KS_ODTObjectDataLine(getCtx(), 0, get_TrxName());
+			X_KS_ODTObjectDataLine newodl = new X_KS_ODTObjectDataLine(getCtx(), 0, null);
 			newodl.setKS_ODTObjectData_ID(newodID);
 			newodl.setAD_Column_ID(poInfo.getAD_Column_ID(columnName));
 
@@ -370,6 +370,11 @@ public class MKSODTVersion extends X_KS_ODTVersion
 						// hardcode to SuperUser
 						value = Integer.valueOf(100);
 						record_id = 100;
+					}
+					if (record_id == -1 && "AD_Menu".equals(refTableName)) {
+						// hardcode to Top Menu
+						value = Integer.valueOf(0);
+						record_id = 0;
 					}
 
 					if (log.isLoggable(Level.FINE)) log.fine("Ref Table:" + refTableName + "|ID:" + record_id);

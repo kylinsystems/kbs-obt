@@ -86,7 +86,7 @@ public class Activator extends AdempiereActivator {
 					Element eODTPackage = (Element)migrations.item(j);
 					Element eODTVersion = (Element)eODTPackage.getElementsByTagName(XMLTag_ODTVersion).item(0);
 
-					String packageName = ((Element)eODTPackage.getElementsByTagName(XMLTag_ODTPackageName).item(0)).getTextContent();
+					String packageName = ((Element)eODTPackage.getElementsByTagName(XMLTag_ODTPackageName).item(0)).getTextContent().trim();
 					int versionNo = Integer.valueOf(eODTVersion.getAttribute(X_KS_ODTVersion.COLUMNNAME_VersionNo));
 					
 					X_KS_ODTPackage odtPkg = null;
