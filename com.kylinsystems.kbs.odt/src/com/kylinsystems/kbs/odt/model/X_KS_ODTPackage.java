@@ -24,14 +24,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for KS_ODTPackage
  *  @author iDempiere (generated) 
- *  @version Release 5.1 - $Id$ */
+ *  @version Release 7.1 - $Id$ */
 public class X_KS_ODTPackage extends PO implements I_KS_ODTPackage, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20171129L;
+	private static final long serialVersionUID = 20200202L;
 
     /** Standard Constructor */
     public X_KS_ODTPackage (Properties ctx, int KS_ODTPackage_ID, String trxName)
