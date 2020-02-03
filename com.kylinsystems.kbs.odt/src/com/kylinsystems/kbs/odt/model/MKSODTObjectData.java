@@ -121,10 +121,10 @@ public class MKSODTObjectData extends X_KS_ODTObjectData
 		odtod.setObjectData_UUID(ObjectData_UUID);
 		odtod.setRecord_ID(Integer.valueOf(Record_ID));
 		odtod.setSeqNo(Integer.valueOf(SeqNo));
-		odtod.setName(Name.getTextContent());
-		odtod.setSQL_Apply(SQL_Apply.getTextContent());
-		odtod.setSQL_Unapply(SQL_Unapply.getTextContent());
-		odtod.setMessgeLog(MessgeLog.getTextContent());
+		odtod.setName(Name.getTextContent().trim());
+		odtod.setSQL_Apply(SQL_Apply.getTextContent().trim());
+		odtod.setSQL_Unapply(SQL_Unapply.getTextContent().trim());
+		odtod.setMessgeLog(MessgeLog.getTextContent().trim());
 		odtod.set_ValueNoCheck(odtod.getUUIDColumnName(), uuid);
 
 		return odtod;

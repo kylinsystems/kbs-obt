@@ -14,7 +14,10 @@
 package com.kylinsystems.kbs.odt.model;
 
 import java.math.BigDecimal;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Savepoint;
+import java.sql.Statement;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -137,6 +140,37 @@ public class MKSODTVersion extends X_KS_ODTVersion
 					Utils.doSynchronizeColumn(mcol.getAD_Column_ID(), getCtx());
 				}
 			}
+			
+			// Apply SQL
+			String applySQL = odtod.getSQL_Apply();
+			if (applySQL != null & !"".equals(applySQL)) {
+				String[] sqls = applySQL.split("--//--");
+				
+				int count = 0;
+				PreparedStatement pstmt = null;
+				for (String sql : sqls) {
+					if (sql != null && !"".equals(sql)) {
+						try {
+							pstmt = DB.prepareStatement(sql, null);
+							Statement stmt = null;
+							try {
+								stmt = pstmt.getConnection().createStatement();
+								count = stmt.executeUpdate (sql);
+								if (log.isLoggable(Level.INFO)) log.info("Executed SQL Statement for PostgreSQL: "+ sql + " ReturnValue="+count);
+							} finally {
+								DB.close(stmt);
+								stmt = null;
+							}
+						} catch (Exception e) {
+							log.log(Level.SEVERE,"SQLStatement", e);
+						} finally {
+							DB.close(pstmt);
+							pstmt = null;
+						}
+					}
+				}
+			}
+			
 		} // end of all ODT OD
 
 		Utils.postInstallPackage(getCtx());

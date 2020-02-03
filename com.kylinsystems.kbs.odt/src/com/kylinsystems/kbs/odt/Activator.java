@@ -17,6 +17,8 @@ import java.io.IOException;
 
 import java.io.InputStream;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.Properties;
 import java.util.logging.Level;
 
@@ -30,6 +32,7 @@ import org.compiere.model.Query;
 import org.compiere.model.X_AD_Column;
 import org.compiere.model.X_AD_SysConfig;
 import org.compiere.model.X_AD_TreeNodeMM;
+import org.compiere.util.DB;
 import org.compiere.util.Env;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -197,6 +200,38 @@ public class Activator extends AdempiereActivator {
 						{
 							X_AD_Column mcol = (X_AD_Column)po;
 							Utils.doSynchronizeColumn(mcol.getAD_Column_ID(), ctx);
+						}
+						
+						// apply SQL
+						Node SQL_ApplyNode = (Element)eODTOD.getElementsByTagName(X_KS_ODTObjectData.COLUMNNAME_SQL_Apply).item(0);
+						String SQL_Apply = isEmpty(SQL_ApplyNode.getTextContent()) == true ? null:SQL_ApplyNode.getTextContent().trim();
+						if (SQL_Apply != null && !"".equals(SQL_Apply)) {
+							logger.fine("Apply SQL :" + SQL_Apply);
+							String[] sqls = SQL_Apply.split("--//--");
+							
+							int count = 0;
+							PreparedStatement pstmt = null;
+							for (String sql : sqls) {
+								if (sql != null && !"".equals(sql)) {
+									try {
+										pstmt = DB.prepareStatement(sql, null);
+										Statement stmt = null;
+										try {
+											stmt = pstmt.getConnection().createStatement();
+											count = stmt.executeUpdate (sql);
+											if (logger.isLoggable(Level.INFO)) logger.info("Executed SQL Statement for PostgreSQL: "+ sql + " ReturnValue="+count);
+										} finally {
+											DB.close(stmt);
+											stmt = null;
+										}
+									} catch (Exception e) {
+										logger.log(Level.SEVERE,"SQLStatement", e);
+									} finally {
+										DB.close(pstmt);
+										pstmt = null;
+									}
+								}
+							}
 						}
 					} // end of all ODT OD
 
