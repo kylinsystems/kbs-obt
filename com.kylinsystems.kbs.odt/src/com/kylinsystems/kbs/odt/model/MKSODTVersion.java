@@ -24,6 +24,8 @@ import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
 
+import org.compiere.model.I_AD_InfoColumn;
+import org.compiere.model.I_AD_InfoWindow;
 import org.compiere.model.I_AD_ToolBarButton;
 import org.compiere.model.Lookup;
 import org.compiere.model.MColumn;
@@ -251,6 +253,8 @@ public class MKSODTVersion extends X_KS_ODTVersion
 		exportObjectData("AD_Tab", whereClause_entitytype, "AD_Window_ID, seqNo");
 		exportObjectData("AD_FieldGroup", whereClause_entitytype, null);
 		exportObjectData("AD_Field", whereClause_entitytype, "AD_Tab_ID, seqNo");
+		exportObjectData(I_AD_InfoWindow.Table_Name, whereClause_entitytype, null);
+		exportObjectData(I_AD_InfoColumn.Table_Name, whereClause_entitytype, "AD_InfoWindow_ID, seqNo");
 		exportObjectData(I_AD_ToolBarButton.Table_Name, whereClause_entitytype, null);
 		exportObjectData("AD_Menu", whereClause_entitytype, null);
 		whereClause = "Node_ID in ("
@@ -297,6 +301,7 @@ public class MKSODTVersion extends X_KS_ODTVersion
 			}
 			
 			newod.setObjectData_UUID(poValue.toString());
+
 			newod.saveEx();
 
 			// ODTObjectDataLine

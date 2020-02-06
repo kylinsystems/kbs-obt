@@ -2,14 +2,14 @@
 <KSYS_IDEMPIERE>
   <ODTPackage ID="1000000" IsImportedODT="Y" ObjectType="ODT_APP" UUID="1d4bf29e-0c81-45d7-a50d-53f4e343cd79">
     <Name>
-      <![CDATA[KSYS ODT]]>
+      <![CDATA[KBS ODT]]>
     </Name>
     <Description>
-      <![CDATA[KSYS ObjectData Tool]]>
+      <![CDATA[KBS ObjectData Tool]]>
     </Description>
     <ODTVersion ID="1000000" UUID="ee040ad1-7481-40be-9ff2-b8f8c2214934" VersionNo="1" Version_Status="Draft">
       <Name>
-        <![CDATA[KSYS ODT-V1]]>
+        <![CDATA[KBS ODT-V1]]>
       </Name>
       <Description/>
       <SystemVersion/>
