@@ -24,9 +24,16 @@ import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
 
+import org.compiere.model.I_AD_IndexColumn;
 import org.compiere.model.I_AD_InfoColumn;
 import org.compiere.model.I_AD_InfoWindow;
+import org.compiere.model.I_AD_Ref_Table;
+import org.compiere.model.I_AD_TableIndex;
 import org.compiere.model.I_AD_ToolBarButton;
+import org.compiere.model.I_AD_WF_Node;
+import org.compiere.model.I_AD_WF_NodeNext;
+import org.compiere.model.I_AD_Window;
+import org.compiere.model.I_AD_Workflow;
 import org.compiere.model.Lookup;
 import org.compiere.model.MColumn;
 import org.compiere.model.MLookup;
@@ -245,17 +252,23 @@ public class MKSODTVersion extends X_KS_ODTVersion
 		exportObjectData("AD_Val_Rule", whereClause_entitytype, null);
 		exportObjectData("AD_Reference", whereClause_entitytype, null);
 		exportObjectData("AD_Ref_List", whereClause_entitytype, null);
-		exportObjectData("AD_Ref_Table", whereClause_entitytype, null);
+		
 		exportObjectData("AD_Process", whereClause_entitytype, null);
 		exportObjectData("AD_Process_Para", whereClause_entitytype, null);
 		exportObjectData("AD_Table", whereClause_entitytype, null);
 		exportObjectData("AD_Column", whereClause_entitytype, "AD_Table_ID, isKey desc");
+		exportObjectData(I_AD_TableIndex.Table_Name, whereClause_entitytype, null);
+		exportObjectData(I_AD_IndexColumn.Table_Name, whereClause_entitytype, "AD_TableIndex_ID, seqNO");
+		exportObjectData(I_AD_Ref_Table.Table_Name, whereClause_entitytype, null);
 		exportObjectData("AD_Tab", whereClause_entitytype, "AD_Window_ID, seqNo");
 		exportObjectData("AD_FieldGroup", whereClause_entitytype, null);
 		exportObjectData("AD_Field", whereClause_entitytype, "AD_Tab_ID, seqNo");
 		exportObjectData(I_AD_InfoWindow.Table_Name, whereClause_entitytype, null);
 		exportObjectData(I_AD_InfoColumn.Table_Name, whereClause_entitytype, "AD_InfoWindow_ID, seqNo");
 		exportObjectData(I_AD_ToolBarButton.Table_Name, whereClause_entitytype, null);
+		exportObjectData(I_AD_Workflow.Table_Name, whereClause_entitytype, null);
+		exportObjectData(I_AD_WF_Node.Table_Name, whereClause_entitytype, null);
+		exportObjectData(I_AD_WF_NodeNext.Table_Name, whereClause_entitytype, null);
 		exportObjectData("AD_Menu", whereClause_entitytype, null);
 		whereClause = "Node_ID in ("
 			+ "select AD_Menu_ID from AD_Menu "

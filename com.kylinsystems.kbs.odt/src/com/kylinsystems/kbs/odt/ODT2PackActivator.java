@@ -92,6 +92,8 @@ public class ODT2PackActivator extends AbstractActivator {
 	}
 
 	private void installPackage() {
+		logger.log(Level.WARNING, "Installing KBS OPTPackage from bundle:" + getName());
+
 		String where = "Name=? AND PK_Status = 'Completed successfully'";
 		Query q = new Query(Env.getCtx(), X_AD_Package_Imp.Table_Name,
 				where.toString(), null);
@@ -108,8 +110,11 @@ public class ODT2PackActivator extends AbstractActivator {
 				installedVersions.add(packageVersionPart);				
 			}
 		}
+		beforePackIn();
 		packIn(installedVersions);
 		afterPackIn();
+		
+		logger.log(Level.WARNING, "Installed KBS OPTPackage from bundle:" + getName());
 	}
 	
 	private static class TwoPackEntry {
@@ -124,7 +129,7 @@ public class ODT2PackActivator extends AbstractActivator {
 	protected void packIn(List<String> installedVersions) {
 		List<TwoPackEntry> list = new ArrayList<TwoPackEntry>();
 				
-		//2Pack_1.0.0.zip, 2Pack_1.0.1.zip, etc
+		//ODT2Pack_1.0.0_*.zip, ODT2Pack_1.0.1_*.zip, etc
 		Enumeration<URL> urls = context.getBundle().findEntries("/META-INF", "ODT2Pack_*.zip", false);
 		if (urls == null)
 			return;
@@ -286,8 +291,22 @@ public class ODT2PackActivator extends AbstractActivator {
 		}
 	}
 	
+	protected void beforePackIn() {
+		URL configURL = getContext().getBundle().getEntry("META-INF/ODTPackage-Before2Pack.xml");
+		if (configURL != null)
+			odtInstall(configURL);		
+		configURL = getContext().getBundle().getEntry("META-INF/ODTPackage.xml");
+		if (configURL != null)
+			odtInstall(configURL);
+	}
+	
 	protected void afterPackIn() {
-		URL configURL = getContext().getBundle().getEntry("META-INF/ODTPackage.xml");
+		URL configURL = getContext().getBundle().getEntry("META-INF/ODTPackage-After2Pack.xml");
+		if (configURL != null)
+			odtInstall(configURL);
+	}
+	
+	protected void odtInstall(URL configURL) {
 		if (configURL != null) {
 			InputStream input = null;
 			try {
@@ -474,7 +493,8 @@ public class ODT2PackActivator extends AbstractActivator {
 				}
 			}
 		}
-	};
+	}
+
 
 	protected void setupPackInContext() {
 		Properties serverContext = new Properties();
