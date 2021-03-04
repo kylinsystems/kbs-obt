@@ -23,14 +23,14 @@ import org.compiere.model.*;
 
 /** Generated Model for KS_ODTObjectDataLine
  *  @author iDempiere (generated) 
- *  @version Release 7.1 - $Id$ */
+ *  @version Release 8.2 - $Id$ */
 public class X_KS_ODTObjectDataLine extends PO implements I_KS_ODTObjectDataLine, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20200202L;
+	private static final long serialVersionUID = 20210304L;
 
     /** Standard Constructor */
     public X_KS_ODTObjectDataLine (Properties ctx, int KS_ODTObjectDataLine_ID, String trxName)
@@ -68,7 +68,7 @@ public class X_KS_ODTObjectDataLine extends PO implements I_KS_ODTObjectDataLine
 
     public String toString()
     {
-      StringBuffer sb = new StringBuffer ("X_KS_ODTObjectDataLine[")
+      StringBuilder sb = new StringBuilder ("X_KS_ODTObjectDataLine[")
         .append(get_ID()).append("]");
       return sb.toString();
     }

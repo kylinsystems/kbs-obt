@@ -24,14 +24,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for KS_ODTVersion
  *  @author iDempiere (generated) 
- *  @version Release 7.1 - $Id$ */
+ *  @version Release 8.2 - $Id$ */
 public class X_KS_ODTVersion extends PO implements I_KS_ODTVersion, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20200202L;
+	private static final long serialVersionUID = 20210304L;
 
     /** Standard Constructor */
     public X_KS_ODTVersion (Properties ctx, int KS_ODTVersion_ID, String trxName)
@@ -71,8 +71,8 @@ public class X_KS_ODTVersion extends PO implements I_KS_ODTVersion, I_Persistent
 
     public String toString()
     {
-      StringBuffer sb = new StringBuffer ("X_KS_ODTVersion[")
-        .append(get_ID()).append("]");
+      StringBuilder sb = new StringBuilder ("X_KS_ODTVersion[")
+        .append(get_ID()).append(",Name=").append(getName()).append("]");
       return sb.toString();
     }
 
