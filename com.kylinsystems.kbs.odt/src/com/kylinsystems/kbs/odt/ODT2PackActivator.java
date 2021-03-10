@@ -20,11 +20,15 @@ import java.io.InputStream;
 import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import java.util.logging.Level;
 
@@ -32,10 +36,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.adempiere.plugin.utils.AbstractActivator;
-import org.adempiere.plugin.utils.Incremental2PackActivator;
 import org.adempiere.plugin.utils.Version;
 import org.adempiere.util.ServerContext;
 import org.compiere.Adempiere;
+import org.compiere.model.MClient;
 import org.compiere.model.MSession;
 import org.compiere.model.MTable;
 import org.compiere.model.PO;
@@ -44,6 +48,7 @@ import org.compiere.model.ServerStateChangeEvent;
 import org.compiere.model.ServerStateChangeListener;
 import org.compiere.model.X_AD_Column;
 import org.compiere.model.X_AD_Package_Imp;
+import org.compiere.model.X_AD_Package_Imp_Proc;
 import org.compiere.model.X_AD_TreeNodeMM;
 import org.compiere.util.AdempiereSystemError;
 import org.compiere.util.CLogger;
@@ -65,10 +70,15 @@ import com.kylinsystems.kbs.odt.model.X_KS_ODTPackage;
 import com.kylinsystems.kbs.odt.model.X_KS_ODTVersion;
 
 public class ODT2PackActivator extends AbstractActivator {
-	protected final static CLogger logger = CLogger.getCLogger(Incremental2PackActivator.class.getName());
-
+	protected final static CLogger logger = CLogger.getCLogger(ODT2PackActivator.class.getName());
+	private File currentFile;
+	private HashMap<String, URL> file2urlMap = new HashMap<String, URL>();
+	
 	public String getName() {
-		return context.getBundle().getSymbolicName();
+		if (currentFile != null)
+			return currentFile.getName();
+		else
+			return context.getBundle().getSymbolicName();
 	}
 
 	@Override
@@ -112,6 +122,7 @@ public class ODT2PackActivator extends AbstractActivator {
 		}
 		beforePackIn();
 		packIn(installedVersions);
+		packInFolder();
 		afterPackIn();
 		
 		logger.log(Level.WARNING, "Installed KBS OPTPackage from bundle:" + getName());
@@ -126,6 +137,85 @@ public class ODT2PackActivator extends AbstractActivator {
 		}
 	}
 	
+	protected void packInFolder() {
+		Enumeration<URL> urls = context.getBundle().findEntries("/META-INF",  "20*.zip", false);
+		if (urls == null)
+			return;
+		
+		setProcessInfo(getProcessInfo());
+		
+		List<File> filesToProcess = new ArrayList<>();
+		
+		while (urls.hasMoreElements()) {
+			URL u = urls.nextElement();
+			File toProcess = new File(u.getFile());
+			currentFile = toProcess;
+			
+			if (installedPackage(null)) {
+				logger.log(Level.INFO, currentFile.getName() + " already installed.");
+			} else {
+				filesToProcess.add(toProcess);
+				file2urlMap.put(currentFile.getName(), u);
+			}
+			currentFile = null;
+		}
+
+		File[] fileArray = filesToProcess.toArray(new File[filesToProcess.size()]);
+		// Sort files by name
+		Arrays.sort(fileArray, new Comparator<File>() {
+			@Override
+			public int compare(File f1, File f2) {
+				return f1.getName().compareTo(f2.getName());
+			}
+		});
+		
+		if (fileArray.length <= 0) {
+			setSummary(Level.INFO, "No zip files to process in PackIn Folder");
+			return;
+		}
+		
+		try {
+			if (getDBLock()) {
+				//Create Session to be able to create records in AD_ChangeLog
+				if (Env.getContextAsInt(Env.getCtx(), Env.AD_SESSION_ID) <= 0)
+					MSession.get(Env.getCtx(), true);
+				for(File zipFile : fileArray) {
+					currentFile = zipFile;
+					if (!packIn(zipFile)) {
+						// stop processing further packages if one fail
+						String msg = "Failed application of " + zipFile;
+						addLog(Level.WARNING, msg);
+						if (getProcessInfo() != null) {
+							getProcessInfo().setError(true);
+							getProcessInfo().setSummary("@Error@: " + msg);
+						}
+						break;
+					}
+					addLog(Level.INFO, "Successful application of " + zipFile);
+					filesToProcess.remove(zipFile);
+				}
+			} else {
+				addLog(Level.WARNING, "Could not acquire the DB lock to automatically install the packins");
+				return;
+			}
+		} catch (AdempiereSystemError e) {
+			e.printStackTrace();
+			addLog(Level.WARNING, e.getLocalizedMessage());
+		} finally {
+			releaseLock();
+			currentFile = null;
+		}
+		
+		if (filesToProcess.size() > 0) {
+			StringBuilder pending = new StringBuilder("The following packages were not applied: ");
+			for (File file : filesToProcess) {
+				pending.append("\n").append(file.getName());
+			}
+			addLog(Level.WARNING, pending.toString());
+		}
+		
+	}
+	
 	protected void packIn(List<String> installedVersions) {
 		List<TwoPackEntry> list = new ArrayList<TwoPackEntry>();
 				
@@ -133,8 +223,9 @@ public class ODT2PackActivator extends AbstractActivator {
 		Enumeration<URL> urls = context.getBundle().findEntries("/META-INF", "ODT2Pack_*.zip", false);
 		if (urls == null)
 			return;
+
 		while(urls.hasMoreElements()) {
-			URL u = urls.nextElement();
+			URL u = urls.nextElement(); 
 			String version = extractVersionString(u);
 			list.add(new TwoPackEntry(u, version));
 		}
@@ -267,6 +358,127 @@ public class ODT2PackActivator extends AbstractActivator {
 		} 
 		return true;
 	}
+	
+	private int[] getClientIDs(String clientValue) {
+		String where = "Value = ?";
+		Query q = new Query(Env.getCtx(), MClient.Table_Name, where, null)
+				.setParameters(clientValue)
+				.setOnlyActiveRecords(true);
+		return q.getIDs();
+	}
+
+	private boolean packIn(File packinFile) {
+		if (packinFile != null) {
+			String fileName = packinFile.getName();
+			logger.warning("Installing " + fileName + " ...");
+
+			// The convention for package names is: yyyymmddHHMM_ClientValue_InformationalDescription.zip
+			String [] parts = fileName.split("_");
+			String clientValue = parts[1];
+			
+			boolean allClients = clientValue.startsWith("ALL-CLIENTS");
+			
+			int[] clientIDs;
+			if (allClients) {
+				int[] seedClientIDs = new int[0];
+				String seedClientValue = "";
+				if (clientValue.startsWith("ALL-CLIENTS-")) {
+					seedClientValue = clientValue.split("-")[2];
+					seedClientIDs = getClientIDs(seedClientValue);				
+					if (seedClientIDs.length == 0) {
+						logger.log(Level.WARNING, "Seed client does not exist: " + seedClientValue);
+						return false;
+					}
+				}
+				int[] allClientIDs = new Query(Env.getCtx(), MClient.Table_Name, "AD_Client_ID>0 AND Value!=?", null)
+						.setOnlyActiveRecords(true)
+						.setParameters(seedClientValue)
+						.setOrderBy("AD_Client_ID")
+						.getIDs();
+				// Process first the seed client, put seed in front of the array
+				int shift = 0;
+				if (seedClientIDs.length > 0)
+					shift = 1;
+				clientIDs = new int[allClientIDs.length + shift];
+				if (seedClientIDs.length > 0)
+					clientIDs[0] = seedClientIDs[0];
+				for (int i = 0; i < allClientIDs.length; i++) {
+					clientIDs[i+shift] = allClientIDs[i];
+				}
+			} else {
+				clientIDs = getClientIDs(clientValue);
+				if (clientIDs.length == 0) {
+					logger.log(Level.WARNING, "Client does not exist: " + clientValue);
+					return false;
+				}
+			}
+
+			for (int clientID : clientIDs) {
+				MClient client = MClient.get(Env.getCtx(), clientID);
+				if  (allClients) {
+					String message = "Installing " + fileName + " in client " + client.getValue() + "/" + client.getName();
+					statusUpdate(message);
+				}
+				Env.setContext(Env.getCtx(), Env.AD_CLIENT_ID, client.getAD_Client_ID());
+				
+				FileOutputStream zipstream = null;
+				try {
+					// copy the resource to a temporary file to process it with 2pack
+					URL packout = file2urlMap.get(fileName);
+					InputStream stream = packout.openStream();
+					File zipfile = File.createTempFile(fileName, null);
+					zipstream = new FileOutputStream(zipfile);
+				    byte[] buffer = new byte[1024];
+				    int read;
+				    while((read = stream.read(buffer)) != -1){
+				    	zipstream.write(buffer, 0, read);
+				    }
+				    
+				    // call 2pack
+					if (service != null) {
+						if (!merge(zipfile, null)) {
+							return false;
+						}
+					} else {
+						if (!directMerge(zipfile, null)) {
+							return false;
+						}
+					}
+				} catch (Throwable e) {
+					logger.log(Level.WARNING, "Pack in failed.", e);
+					return false;
+				} finally {
+					if (zipstream != null) {
+						try {
+							zipstream.close();
+						} catch (Exception e2) {}
+					}
+					Env.setContext(Env.getCtx(), Env.AD_CLIENT_ID, 0);
+				}
+				logger.warning(packinFile.getPath() + " installed");
+			}
+			if (allClients ) {
+				// when arriving here it means an ALL-CLIENTS 2pack was processed successfully
+				// register a record on System to avoid future reprocesses of the same file
+				X_AD_Package_Imp_Proc pimpr = new X_AD_Package_Imp_Proc(Env.getCtx(), 0, null);
+				pimpr.setName(fileName);
+				pimpr.setDateProcessed(new Timestamp(System.currentTimeMillis()));
+				pimpr.setP_Msg("This ALL-CLIENT 2Pack was applied successfully in all tenants");
+				pimpr.setAD_Package_Source_Type(X_AD_Package_Imp_Proc.AD_PACKAGE_SOURCE_TYPE_File);
+				pimpr.saveEx();
+				X_AD_Package_Imp pimp = new X_AD_Package_Imp(Env.getCtx(), 0, null);
+				pimp.setAD_Package_Imp_Proc_ID(pimpr.getAD_Package_Imp_Proc_ID());
+				pimp.setName(fileName);
+				pimp.setPK_Status("Completed successfully");
+				pimp.setDescription("This ALL-CLIENT 2Pack was applied successfully in all tenants");
+				pimp.setProcessed(true);
+				pimp.saveEx();
+			}
+		}
+
+		return true;
+	}
+	
 
 	protected BundleContext getContext() {
 		return context;
@@ -498,7 +710,7 @@ public class ODT2PackActivator extends AbstractActivator {
 
 	protected void setupPackInContext() {
 		Properties serverContext = new Properties();
-		serverContext.setProperty("#AD_Client_ID", "0");
+		serverContext.setProperty(Env.AD_CLIENT_ID, "0");
 		ServerContext.setCurrentInstance(serverContext);
 	};
 
@@ -511,7 +723,7 @@ public class ODT2PackActivator extends AbstractActivator {
 					public void run() {
 						ClassLoader cl = Thread.currentThread().getContextClassLoader();
 						try {
-							Thread.currentThread().setContextClassLoader(Incremental2PackActivator.class.getClassLoader());
+							Thread.currentThread().setContextClassLoader(ODT2PackActivator.class.getClassLoader());
 							setupPackInContext();
 							installPackage();
 						} finally {
@@ -528,7 +740,7 @@ public class ODT2PackActivator extends AbstractActivator {
 						if (event.getEventType() == ServerStateChangeEvent.SERVER_START && service != null) {
 							ClassLoader cl = Thread.currentThread().getContextClassLoader();
 							try {
-								Thread.currentThread().setContextClassLoader(Incremental2PackActivator.class.getClassLoader());
+								Thread.currentThread().setContextClassLoader(ODT2PackActivator.class.getClassLoader());
 								setupPackInContext();
 								installPackage();
 							} finally {
