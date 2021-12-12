@@ -212,7 +212,7 @@ public class Utils {
 			if (refPO != null) {
 				po.set_ValueNoCheck(columnName, refPO.get_ID());
 			} else {
-				if (log.isLoggable(Level.FINE)) log.fine("RefPO is null, RefTableName:" + refTableName + "|UUID:" + NewUUID);
+				if (log.isLoggable(Level.WARNING)) log.fine("RefPO is null, RefTableName:" + refTableName + "|UUID:" + NewUUID);
 			}
 		}
 

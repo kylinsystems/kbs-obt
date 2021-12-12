@@ -7,7 +7,7 @@
 
 	<groupId>com.kylinsystems.kbs.odt</groupId>
 	<artifactId>com.kylinsystems.kbs.odt.main</artifactId>
-	<version>8.2.0</version>
+	<version>${revision}</version>
 	<modules>
 		<module>com.kylinsystems.kbs.odt</module>
 		<module>com.kylinsystems.kbs.odt-feature</module>
