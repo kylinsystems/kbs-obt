@@ -24,14 +24,15 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for KS_ODTVersion
  *  @author iDempiere (generated) 
- *  @version Release 8.2 - $Id$ */
+ *  @version Development 9.0 - $Id$ */
+@org.adempiere.base.Model(table="KS_ODTVersion")
 public class X_KS_ODTVersion extends PO implements I_KS_ODTVersion, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20210304L;
+	private static final long serialVersionUID = 20211212L;
 
     /** Standard Constructor */
     public X_KS_ODTVersion (Properties ctx, int KS_ODTVersion_ID, String trxName)
@@ -94,9 +95,10 @@ public class X_KS_ODTVersion extends PO implements I_KS_ODTVersion, I_Persistent
 	}
 
 	public com.kylinsystems.kbs.odt.model.I_KS_ODTPackage getKS_ODTPackage() throws RuntimeException
-    {
-		return (com.kylinsystems.kbs.odt.model.I_KS_ODTPackage)MTable.get(getCtx(), com.kylinsystems.kbs.odt.model.I_KS_ODTPackage.Table_Name)
-			.getPO(getKS_ODTPackage_ID(), get_TrxName());	}
+	{
+		return (com.kylinsystems.kbs.odt.model.I_KS_ODTPackage)MTable.get(getCtx(), com.kylinsystems.kbs.odt.model.I_KS_ODTPackage.Table_ID)
+			.getPO(getKS_ODTPackage_ID(), get_TrxName());
+	}
 
 	/** Set ODTPackage ID.
 		@param KS_ODTPackage_ID 
@@ -308,10 +310,10 @@ public class X_KS_ODTVersion extends PO implements I_KS_ODTVersion, I_Persistent
 		return (String)get_Value(COLUMNNAME_Version_Release);
 	}
 
-	/** Released = Released */
-	public static final String VERSION_STATUS_Released = "Released";
 	/** Draft = Draft */
 	public static final String VERSION_STATUS_Draft = "Draft";
+	/** Released = Released */
+	public static final String VERSION_STATUS_Released = "Released";
 	/** Set Version Status.
 		@param Version_Status 
 		Version Status

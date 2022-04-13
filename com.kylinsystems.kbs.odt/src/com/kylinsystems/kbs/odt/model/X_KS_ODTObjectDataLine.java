@@ -23,14 +23,15 @@ import org.compiere.model.*;
 
 /** Generated Model for KS_ODTObjectDataLine
  *  @author iDempiere (generated) 
- *  @version Release 8.2 - $Id$ */
+ *  @version Development 9.0 - $Id$ */
+@org.adempiere.base.Model(table="KS_ODTObjectDataLine")
 public class X_KS_ODTObjectDataLine extends PO implements I_KS_ODTObjectDataLine, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20210304L;
+	private static final long serialVersionUID = 20211212L;
 
     /** Standard Constructor */
     public X_KS_ODTObjectDataLine (Properties ctx, int KS_ODTObjectDataLine_ID, String trxName)
@@ -74,9 +75,10 @@ public class X_KS_ODTObjectDataLine extends PO implements I_KS_ODTObjectDataLine
     }
 
 	public org.compiere.model.I_AD_Column getAD_Column() throws RuntimeException
-    {
-		return (org.compiere.model.I_AD_Column)MTable.get(getCtx(), org.compiere.model.I_AD_Column.Table_Name)
-			.getPO(getAD_Column_ID(), get_TrxName());	}
+	{
+		return (org.compiere.model.I_AD_Column)MTable.get(getCtx(), org.compiere.model.I_AD_Column.Table_ID)
+			.getPO(getAD_Column_ID(), get_TrxName());
+	}
 
 	/** Set Column.
 		@param AD_Column_ID 
@@ -150,9 +152,10 @@ public class X_KS_ODTObjectDataLine extends PO implements I_KS_ODTObjectDataLine
 	}
 
 	public com.kylinsystems.kbs.odt.model.I_KS_ODTObjectData getKS_ODTObjectData() throws RuntimeException
-    {
-		return (com.kylinsystems.kbs.odt.model.I_KS_ODTObjectData)MTable.get(getCtx(), com.kylinsystems.kbs.odt.model.I_KS_ODTObjectData.Table_Name)
-			.getPO(getKS_ODTObjectData_ID(), get_TrxName());	}
+	{
+		return (com.kylinsystems.kbs.odt.model.I_KS_ODTObjectData)MTable.get(getCtx(), com.kylinsystems.kbs.odt.model.I_KS_ODTObjectData.Table_ID)
+			.getPO(getKS_ODTObjectData_ID(), get_TrxName());
+	}
 
 	/** Set KS ODTObjectData ID.
 		@param KS_ODTObjectData_ID 

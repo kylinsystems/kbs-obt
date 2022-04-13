@@ -100,8 +100,18 @@ public class ODT2PackActivator extends AbstractActivator {
 	public String getDescription() {
 		return getName();
 	}
+	
+	protected void preInstallPackage() {
+		// to be override in sub class
+	}
+	protected void postInstallPackage() {
+		// to be override in sub class
+	}
 
 	private void installPackage() {
+		logger.log(Level.WARNING, "Pre of Installing KBS OPTPackage from bundle:" + getName());
+		preInstallPackage();
+		
 		logger.log(Level.WARNING, "Installing KBS OPTPackage from bundle:" + getName());
 
 		String where = "Name=? AND PK_Status = 'Completed successfully'";
@@ -126,6 +136,9 @@ public class ODT2PackActivator extends AbstractActivator {
 		afterPackIn();
 		
 		logger.log(Level.WARNING, "Installed KBS OPTPackage from bundle:" + getName());
+		
+		postInstallPackage();
+		logger.log(Level.WARNING, "Post of Installed KBS OPTPackage from bundle:" + getName());
 	}
 	
 	private static class TwoPackEntry {
@@ -137,7 +150,7 @@ public class ODT2PackActivator extends AbstractActivator {
 		}
 	}
 	
-	protected void packInFolder() {
+	private void packInFolder() {
 		Enumeration<URL> urls = context.getBundle().findEntries("/META-INF",  "20*.zip", false);
 		if (urls == null)
 			return;
@@ -216,7 +229,7 @@ public class ODT2PackActivator extends AbstractActivator {
 		
 	}
 	
-	protected void packIn(List<String> installedVersions) {
+	private void packIn(List<String> installedVersions) {
 		List<TwoPackEntry> list = new ArrayList<TwoPackEntry>();
 				
 		//ODT2Pack_1.0.0_*.zip, ODT2Pack_1.0.1_*.zip, etc
@@ -323,7 +336,7 @@ public class ODT2PackActivator extends AbstractActivator {
 		return v;
 	}
 
-	protected boolean packIn(URL packout) {
+	private boolean packIn(URL packout) {
 		if (packout != null && service != null) {
 			//Create Session to be able to create records in AD_ChangeLog
 			MSession.get(Env.getCtx(), true);
@@ -480,11 +493,11 @@ public class ODT2PackActivator extends AbstractActivator {
 	}
 	
 
-	protected BundleContext getContext() {
+	private BundleContext getContext() {
 		return context;
 	}
 
-	protected void setContext(BundleContext context) {
+	private void setContext(BundleContext context) {
 		this.context = context;
 	}
 
@@ -503,7 +516,7 @@ public class ODT2PackActivator extends AbstractActivator {
 		}
 	}
 	
-	protected void beforePackIn() {
+	private void beforePackIn() {
 		URL configURL = getContext().getBundle().getEntry("META-INF/ODTPackage-Before2Pack.xml");
 		if (configURL != null)
 			odtInstall(configURL);		
@@ -512,13 +525,13 @@ public class ODT2PackActivator extends AbstractActivator {
 			odtInstall(configURL);
 	}
 	
-	protected void afterPackIn() {
+	private void afterPackIn() {
 		URL configURL = getContext().getBundle().getEntry("META-INF/ODTPackage-After2Pack.xml");
 		if (configURL != null)
 			odtInstall(configURL);
 	}
 	
-	protected void odtInstall(URL configURL) {
+	private void odtInstall(URL configURL) {
 		if (configURL != null) {
 			InputStream input = null;
 			try {
@@ -708,7 +721,7 @@ public class ODT2PackActivator extends AbstractActivator {
 	}
 
 
-	protected void setupPackInContext() {
+	private void setupPackInContext() {
 		Properties serverContext = new Properties();
 		serverContext.setProperty(Env.AD_CLIENT_ID, "0");
 		ServerContext.setCurrentInstance(serverContext);

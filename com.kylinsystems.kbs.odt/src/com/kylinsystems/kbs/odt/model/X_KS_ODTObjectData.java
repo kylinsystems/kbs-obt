@@ -23,14 +23,15 @@ import org.compiere.model.*;
 
 /** Generated Model for KS_ODTObjectData
  *  @author iDempiere (generated) 
- *  @version Release 8.2 - $Id$ */
+ *  @version Development 9.0 - $Id$ */
+@org.adempiere.base.Model(table="KS_ODTObjectData")
 public class X_KS_ODTObjectData extends PO implements I_KS_ODTObjectData, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20210304L;
+	private static final long serialVersionUID = 20211212L;
 
     /** Standard Constructor */
     public X_KS_ODTObjectData (Properties ctx, int KS_ODTObjectData_ID, String trxName)
@@ -82,9 +83,10 @@ public class X_KS_ODTObjectData extends PO implements I_KS_ODTObjectData, I_Pers
     }
 
 	public org.compiere.model.I_AD_Table getAD_Table() throws RuntimeException
-    {
-		return (org.compiere.model.I_AD_Table)MTable.get(getCtx(), org.compiere.model.I_AD_Table.Table_Name)
-			.getPO(getAD_Table_ID(), get_TrxName());	}
+	{
+		return (org.compiere.model.I_AD_Table)MTable.get(getCtx(), org.compiere.model.I_AD_Table.Table_ID)
+			.getPO(getAD_Table_ID(), get_TrxName());
+	}
 
 	/** Set Table.
 		@param AD_Table_ID 
@@ -174,9 +176,10 @@ public class X_KS_ODTObjectData extends PO implements I_KS_ODTObjectData, I_Pers
 	}
 
 	public com.kylinsystems.kbs.odt.model.I_KS_ODTVersion getKS_ODTVersion() throws RuntimeException
-    {
-		return (com.kylinsystems.kbs.odt.model.I_KS_ODTVersion)MTable.get(getCtx(), com.kylinsystems.kbs.odt.model.I_KS_ODTVersion.Table_Name)
-			.getPO(getKS_ODTVersion_ID(), get_TrxName());	}
+	{
+		return (com.kylinsystems.kbs.odt.model.I_KS_ODTVersion)MTable.get(getCtx(), com.kylinsystems.kbs.odt.model.I_KS_ODTVersion.Table_ID)
+			.getPO(getKS_ODTVersion_ID(), get_TrxName());
+	}
 
 	/** Set ODTVersion ID.
 		@param KS_ODTVersion_ID 
@@ -235,14 +238,14 @@ public class X_KS_ODTObjectData extends PO implements I_KS_ODTObjectData, I_Pers
 		return (String)get_Value(COLUMNNAME_Name);
 	}
 
-	/** N/A = N/A */
-	public static final String OBJECTDATA_ACTION_NA = "N/A";
-	/** Insert = Insert */
-	public static final String OBJECTDATA_ACTION_Insert = "Insert";
-	/** Update = Update */
-	public static final String OBJECTDATA_ACTION_Update = "Update";
 	/** Delete = Delete */
 	public static final String OBJECTDATA_ACTION_Delete = "Delete";
+	/** Insert = Insert */
+	public static final String OBJECTDATA_ACTION_Insert = "Insert";
+	/** N/A = N/A */
+	public static final String OBJECTDATA_ACTION_NA = "N/A";
+	/** Update = Update */
+	public static final String OBJECTDATA_ACTION_Update = "Update";
 	/** Set ObjectData Action.
 		@param ObjectData_Action 
 		ObjectData Action
@@ -263,10 +266,10 @@ public class X_KS_ODTObjectData extends PO implements I_KS_ODTObjectData, I_Pers
 
 	/** Applied = Applied */
 	public static final String OBJECTDATA_STATUS_Applied = "Applied";
-	/** Unapplied = Unapplied */
-	public static final String OBJECTDATA_STATUS_Unapplied = "Unapplied";
 	/** Failed = Failed */
 	public static final String OBJECTDATA_STATUS_Failed = "Failed";
+	/** Unapplied = Unapplied */
+	public static final String OBJECTDATA_STATUS_Unapplied = "Unapplied";
 	/** Set ObjectData Status.
 		@param ObjectData_Status 
 		ObjectData_Status
