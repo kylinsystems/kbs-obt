@@ -138,7 +138,7 @@ public class Utils {
 					AD_Val_Rule_ID, ctx, log);
 		} else if (displayType == DisplayType.Integer) {
 			if (!IsNewNullValue && isColumnUpdateable && !"".equals(columnValue)) {
-				po.set_ValueNoCheck(columnName, new Integer(columnValue));
+				po.set_ValueNoCheck(columnName, Integer.valueOf(columnValue));
 			} else if (!isColumnUpdateable) {
 				if (log.isLoggable(Level.FINE)) log.fine("Updateable is false, Column Name:" + columnName);
 			}
